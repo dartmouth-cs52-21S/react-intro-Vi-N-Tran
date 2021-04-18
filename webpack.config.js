@@ -12,11 +12,8 @@ const finalCSSLoader = (env === 'production') ? MiniCssExtractPlugin.loader : { 
 
 module.exports = {
   mode: env,
-  entry: ['./src'], // this is where our app lives
+  entry: ['./src/index.js'], // this is where our app lives
   devtool: 'source-map', // this enables debugging with source in chrome devtools
-  devServer: {
-    hot: true,
-  },
   module: {
     rules: [
       {
@@ -67,16 +64,12 @@ module.exports = {
               sourceMap: true,
             },
           },
-          {
-            test: /\.tsx?$/,
-            use: 'ts-loader',
-            exclude: /node_modules/,
-          },
         ],
       },
-      // all files with a `.ts` or `.tsx` extension will be handled by `ts-loader`
-      { test: /\.tsx?$/, loader: 'ts-loader' },
     ],
+  },
+  devServer: {
+    hot: true,
   },
   plugins: [
     new MiniCssExtractPlugin({
