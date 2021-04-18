@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dartmouth-cs52-21S/starterpack-Vi-N-Tran.git"
+    "url": "git+https://github.com/dartmouth-cs52-21S/react-intro-Vi-N-Tran.git"
   },
   "author": "Vi Tran",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dartmouth-cs52-21S/starterpack-Vi-N-Tran/issues"
+    "url": "https://github.com/dartmouth-cs52-21S/react-intro-Vi-N-Tran/issues"
   },
-  "homepage": "https://github.com/dartmouth-cs52-21S/starterpack-Vi-N-Tran#readme",
+  "homepage": "https://github.com/dartmouth-cs52-21S/react-intro-Vi-N-Tran#readme",
   "devDependencies": {
     "@babel/core": "^7.13.15",
     "@babel/eslint-parser": "^7.13.14",
