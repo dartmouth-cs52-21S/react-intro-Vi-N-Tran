@@ -81,10 +81,6 @@ module.exports = {
       filename: './index.html',
     }),
   ],
-  resolve: {
-    // Add `.ts` and `.tsx` as a resolvable extension.
-    extensions: ['.ts', '.tsx', '.js'],
-  },
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
