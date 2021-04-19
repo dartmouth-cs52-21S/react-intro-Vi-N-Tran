@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 import './style.scss';
 import debounce from 'lodash.debounce';
 import youtubeSearch from './youtube-api';
+// import weatherSearch from './weather-api';
 
 import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
+// import WeatherScreen from './components/weather';
 
 class App extends Component {
   constructor(props) {

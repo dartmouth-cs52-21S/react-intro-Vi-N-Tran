@@ -2,7 +2,7 @@ import React from 'react';
 
 const VideoDetail = ({ video }) => {
   if (!video) {
-    return <div>Loading...</div>;
+    return <div>loading...</div>;
   }
   const { videoId } = video.id; // will give linting error - read it and decide for yourself
   // {videoId} = video.id // is example of destructuring
@@ -14,8 +14,8 @@ const VideoDetail = ({ video }) => {
         <iframe className="embed-responsive-item" src={url} title={video.snippet.title} />
       </div>
       <div className="details">
-        <div>{video.snippet.title}</div>
-        <div>{video.snippet.description}</div>
+        <div><h2>{video.snippet.title}</h2></div>
+        <div><p>{video.snippet.description}</p></div>
       </div>
     </div>
   );

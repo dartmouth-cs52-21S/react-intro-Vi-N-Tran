@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import logo from '../img/youtube.png';
+import searchIcons from '../img/search-icons.png';
 
-// eslint-disable-next-line react/prefer-stateless-function
 class SearchBar extends Component {
   constructor(props) {
     super(props);
@@ -8,17 +9,17 @@ class SearchBar extends Component {
     this.state = { searchterm: '' };
   }
 
-  // eslint-disable-next-line class-methods-use-this
   onInputChange = (event) => {
     this.setState({ searchterm: event.target.value });
     this.props.onSearchChange(event.target.value);
-    console.log(event.target.value);
   }
 
   render() {
     return (
       <div id="search-bar">
-        <input onChange={this.onInputChange} value={this.state.searchterm} />
+        <img src={logo} alt="logo" />
+        <input onChange={this.onInputChange} value={this.state.searchterm} placeholder="Search" />
+        <img src={searchIcons} alt="icons" />
       </div>
     );
   }

@@ -1,11 +1,14 @@
 body, html {
   font-family: "Roboto", sans-serif;
-  background: linear-gradient(to bottom, #87e0fd 0%,#53cbf1 40%,#05abe0 100%);
+  background: #212121;
   height: 100%;
 }
-$fontcolor:  rgb(10%, 10%, 10%);
-$backgroundcolor: rgb(98%, 98%, 98%);
+$fontcolor:  #ffffff;
+$backgroundcolor: #212121;
 
+h2{
+  margin-top: 40px;
+}
 
 body {
   font-family: "Roboto", sans-serif;
@@ -17,10 +20,18 @@ body {
 
 #search-bar {
   margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
 
   input {
-    font-size: 1.5em;
-    border-radius: .25em;
+    font-size: 1em;
+    border: none;
+    margin-left: 20px;
+    width: 60%;
+  }
+
+  img{
+    height: 50px;
   }
 }
 
@@ -35,8 +46,13 @@ body {
     list-style: none;
     cursor: pointer;
     display: flex;
-    width: 25vw;
+    justify-content: space-evenly;
+    width: 400px;
     padding: 10px;
+
+    .video-description{
+      width: 200px;
+    }
   }
   li:hover {
     background: darken( $backgroundcolor, 10% );
