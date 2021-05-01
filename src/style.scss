@@ -3,7 +3,6 @@ body, html {
   background: #212121;
   height: 100%;
 }
-<<<<<<< HEAD
 $fontcolor:  #ffffff;
 $backgroundcolor: #212121;
 
@@ -59,15 +58,4 @@ body {
     background: darken( $backgroundcolor, 10% );
   }
 
-=======
-.logo {
-  background-image: url('./img/backwards_parrot.gif');
-  width: 100px;
-  height: 100px;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.active {
-  color: pink;
->>>>>>> c5220ebf5aa3772fe1fba39180370988b8ba4a04
 }

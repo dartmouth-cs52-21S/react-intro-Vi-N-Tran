@@ -1,23 +1,19 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import './style.scss';
+import { connect } from 'react-redux';
+
+import '../style.scss';
 import debounce from 'lodash.debounce';
-import youtubeSearch from './youtube-api';
-// import weatherSearch from './weather-api';
+import youtubeSearch from '../youtube-api';
 
-import SearchBar from './components/search_bar';
-import VideoList from './components/video_list';
-import VideoDetail from './components/video_detail';
-// import WeatherScreen from './components/weather';
+import SearchBar from './search_bar';
+import VideoList from './video_list';
+import VideoDetail from './video_detail';
 
-class App extends Component {
+import { setVideos } from '../actions';
+
+class Youtube extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      videos: [],
-      selectedVideo: null,
-    };
 
     this.search = debounce(this.search, 300);
     this.search('pixar');
@@ -25,10 +21,7 @@ class App extends Component {
 
   search = (text) => {
     youtubeSearch(text).then((videos) => {
-      this.setState({
-        videos,
-        selectedVideo: videos[0],
-      });
+      this.props.setVideos(videos);
     });
   }
 
@@ -37,12 +30,12 @@ class App extends Component {
       <div>
         <SearchBar onSearchChange={this.search} />
         <div id="video-section">
-          <VideoDetail video={this.state.selectedVideo} />
-          <VideoList onVideoSelect={(selectedVideo) => this.setState({ selectedVideo })} videos={this.state.videos} />
+          <VideoDetail />
+          <VideoList />
         </div>
       </div>
     );
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('main'));
+export default connect(null, { setVideos })(Youtube);
